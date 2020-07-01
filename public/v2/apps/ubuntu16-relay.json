@@ -33,8 +33,7 @@
                     "RUN aptitude install -y npm",
                     "RUN apt-get update && apt-get install -y python3-pip",
                     "RUN pip3 install --upgrade pip",
-                    "RUN apt-get update && apt-get install -y locales",
-                    "ENTRYPOINT cd /data/relay && npm start run"
+                    "RUN apt-get update && apt-get install -y locales"
                 ],
                 "ports": ["$$cap_sshd_port:22"],
                 "volumes": ["$$cap_appname-data:/data"],
